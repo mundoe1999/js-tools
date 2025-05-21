@@ -1,7 +1,7 @@
 {
   "name": "json-to-csv",
   "version": "1.0.0",
-  "description": "Converts JSON file to a readable CSV file (using | separators).",
+  "description": "Converts flat JSON file to a readable CSV file (using | separators). Expects a List of JSON object with all the keys on the first entry",
   "main": "index.js",
   "type": "module",
   "scripts": {

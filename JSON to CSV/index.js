@@ -16,8 +16,7 @@ fs.readFile(inputFile, (error, result) => {
     // todo: This assumes that the object being passed is an array. What if it's not?
     var parsedJson = JSON.parse(result.toString('utf-8'))
 
-
-    // Get the keys
+    // Get the keys and stores
     var keys = Object.keys(parsedJson[0])
     outputStream.write(convertArrayToRow(keys))
     
@@ -27,6 +26,7 @@ fs.readFile(inputFile, (error, result) => {
       for(let i = 0; i < keys.length; i++){
         row.push(item[keys[i]])
       }
+      // Push Result to output file
       outputStream.write(convertArrayToRow(row))
     })
   }
